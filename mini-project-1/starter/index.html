@@ -3,72 +3,77 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <style type="text/css">
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: #111;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card {
+        background: transparent;
+        border: none;
+        border-radius: none!important;
+      }
+
+      .card-header {
+        background: transparent;
+        border-bottom: none;
+      }
+
+      .form-inline {
+        width: 100%!important;
+        display: block;
+      }
+
+      #todo-form button {
+        font-size: .8em;
+      }
+    </style>
+
+    <title>Mini Todo List</title>
   </head>
   <body>
     <div class="container">
       <div class="row justify-content-md-center mt-5 mb-5">
-        <div class="col col-lg-2"></div>
         <div class="col-md-auto text-center">
-          <h1>Javascript Mini Project 1</h1>
+          <h1>Javascript Mini Project</h1>
           <h6>
-            <span class="badge badge-success">Beginner</span>
+            <span class="badge">Beginner</span>
           </h6>
         </div>
-        <div class="col col-lg-2"></div>
       </div>
     </div>
 
     <div class="container p-0">
-      <div class="card text-center bg-dark rounded-0">
-        <h5 class="card-header text-white">
-          Add todo list here
-        </h5>
-
-        <div class="card-body text-white">
-          <form id="todo-form">
+      <div class="card text-center">
+        <h5 class="card-header">Add todo list here</h5>
+        <div class="card-body">
+          <form id="todo-form" class="">
             <div class="form-group">
-              <label for="task">Todo input</label>
-              <input
-                type="text"
-                id="todo-input"
-                class="form-control form-control-lg"
-                name="task"
-              />
+              <!-- <label for="task">Todo input</label> -->
+              <input type="text" id="todo-input" class="form-control" name="task" placeholder="Todo Input" />
             </div>
-            <button type="submit" class="btn btn-lg btn-block btn-primary mb-2">
-              Add Todo List
-            </button>
+            <button type="submit" class="btn btn-dark btn-block">Add Todo List</button>
           </form>
+
         </div>
 
         <div class="card-body">
-          <h3 class="text-white">Todo List</h3>
-
-          <div class="input-group mb-3">
+          <h3>Todo List</h3>
+          <div class="input-group my-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Filter Tasks</span>
             </div>
-            <input
-              type="text"
-              class="form-control"
-              id="filter-input"
-              aria-label="Task Filter"
-              aria-describedby="task-filter"
-            />
+            <input type="text" class="form-control" id="filter-input" aria-label="Task Filter" aria-describedby="task-filter" />
           </div>
 
           <ul class="list-group" id="todo-list">
@@ -82,30 +87,18 @@
         </div>
 
         <div class="card-body mb-3">
-          <button
-            class="btn btn-outline-warning btn-block"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseClearButton"
-            aria-expanded="false"
-            aria-controls="collapseClearButton"
-          >
+          <button class="btn btn-outline-warning btn-block" type="button" data-toggle="collapse" data-target="#collapseClearButton" aria-expanded="false" aria-controls="collapseClearButton" >
             Clear Todo List
           </button>
 
           <div class="collapse" id="collapseClearButton">
-            <button
-              class="btn btn-danger btn-lg btn-block clear-todos mt-3"
-              id="clear-todos"
-            >
+            <button class="btn btn-danger btn-lg btn-block clear-todos mt-3" id="clear-todos" >
               Clear Todo List for Real
             </button>
           </div>
         </div>
 
-        <div class="card-footer text-white">
-          Wegodev Indonesia
-        </div>
+        <div class="card-footer text-center">Wegodev Indonesia</div>
       </div>
     </div>
     <!-- Optional JavaScript -->
